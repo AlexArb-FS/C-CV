@@ -11,7 +11,27 @@ namespace AlexArboledaCV
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                string HttpQuery = HttpContext.Current.Request.Url.AbsolutePath;
+                string[] BannedViews = new string[] { "Login", "Home" };
 
+                bool UserInterfaceVisible = false;
+
+                foreach (string View in BannedViews)
+                {
+                    UserInterfaceVisible |= HttpQuery.Contains(View);
+                }
+                UserInterfaceVisible = !UserInterfaceVisible;
+
+                HeaderUpper.Visible = UserInterfaceVisible;
+                //HeaderLower.Visible = UserInterfaceVisible;
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }

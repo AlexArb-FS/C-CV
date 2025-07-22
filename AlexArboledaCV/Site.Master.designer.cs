@@ -15,13 +15,13 @@ namespace AlexArboledaCV
     {
 
         /// <summary>
-        /// HeadContent control.
+        /// HeaderUpper control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl HeaderUpper;
 
         /// <summary>
         /// MainContent control.
@@ -31,5 +31,14 @@ namespace AlexArboledaCV
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+
+        /// <summary>
+        /// footer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl footer;
     }
 }

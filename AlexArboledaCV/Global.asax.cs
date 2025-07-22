@@ -14,8 +14,14 @@ namespace AlexArboledaCV
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //RouteConfig.RegisterRoutes(RouteTable.Routes);
+            RegisterRoutes(RouteTable.Routes);
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+        void RegisterRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute("Default", "", "~/Views/Home.aspx");
+            routes.MapPageRoute("HomePage", "Home-Page", "~/Views/Home.aspx");
         }
     }
 }
